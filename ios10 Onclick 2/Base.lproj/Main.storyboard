@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,28 +22,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhR-aa-20Q">
-                                <rect key="frame" x="114" y="80" width="93.5" height="20.5"/>
+                                <rect key="frame" x="113" y="50" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccf-S6-5Py">
-                                <rect key="frame" x="130" y="150.5" width="60" height="30"/>
+                                <rect key="frame" x="130" y="101" width="60" height="30"/>
                                 <state key="normal" title="Push Me"/>
                                 <connections>
                                     <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6uv-MT-GiP"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-ta-66D">
+                                <rect key="frame" x="109.5" y="215" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="95k-2g-Z4X"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="mcP-6L-5GO"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PW-2D-wEq">
+                                <rect key="frame" x="110" y="152" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="jbN-9E-a7d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ktf-aK-QUZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lhR-aa-20Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WSn-gu-7ea"/>
-                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="top" secondItem="lhR-aa-20Q" secondAttribute="bottom" constant="50" id="kR7-g2-6KC"/>
-                            <constraint firstItem="lhR-aa-20Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="vRe-tC-jiL"/>
-                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfz-mA-ZhM"/>
+                            <constraint firstItem="lhR-aa-20Q" firstAttribute="centerX" secondItem="0PW-2D-wEq" secondAttribute="centerX" id="1XA-Zz-XbB"/>
+                            <constraint firstItem="0PW-2D-wEq" firstAttribute="top" secondItem="Ccf-S6-5Py" secondAttribute="bottom" constant="21" id="2uS-rK-qff"/>
+                            <constraint firstItem="0PW-2D-wEq" firstAttribute="trailing" secondItem="Awf-ta-66D" secondAttribute="trailing" id="Dlz-cH-XfG"/>
+                            <constraint firstItem="Awf-ta-66D" firstAttribute="top" secondItem="0PW-2D-wEq" secondAttribute="bottom" constant="33" id="Joz-Kk-evY"/>
+                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KvJ-5p-5vv"/>
+                            <constraint firstItem="0PW-2D-wEq" firstAttribute="leading" secondItem="Awf-ta-66D" secondAttribute="leading" id="TOg-Ad-pEL"/>
+                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="centerX" secondItem="0PW-2D-wEq" secondAttribute="centerX" id="Wya-I9-9Gm"/>
+                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="top" secondItem="lhR-aa-20Q" secondAttribute="bottom" constant="30" id="t15-uC-AFQ"/>
+                            <constraint firstItem="lhR-aa-20Q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="ttg-Zo-QgZ"/>
+                            <constraint firstItem="Ccf-S6-5Py" firstAttribute="top" secondItem="lhR-aa-20Q" secondAttribute="bottom" constant="30" id="zQ5-wg-3wd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="text1" destination="0PW-2D-wEq" id="lxD-7w-7ec"/>
+                        <outlet property="text2" destination="Awf-ta-66D" id="Ctg-xM-xhj"/>
                         <outlet property="theLabel" destination="lhR-aa-20Q" id="uY0-Kr-OSH"/>
                     </connections>
                 </viewController>

@@ -12,16 +12,16 @@ class ViewController: UIViewController {
 
     @IBOutlet var theLabel: UILabel!
     
-    var tapCount = 0
+    
+    
+    @IBOutlet var text1: UITextField!
+    
+    @IBOutlet var text2: UITextField!
+    
+ 
     
     @IBAction func tapButton(_ sender: Any) {
-    tapCount = tapCount + 1
-        print (tapCount)
-        
-        if tapCount >= 10 {
-            theLabel.text = "10 times"
-        }
-        
+        theLabel.text = "Answer is \(Int(text1.text!)! + Int(text2.text!)!)"
     }
     
     
